@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CustomImmersion</string>
+
+    <string name="red_title">红色</string>
+    <string name="blue_title">蓝色</string>
+    <string name="green_title">绿色</string>
+
+    <string name="action_settings">Settings</string>
+
+</resources>

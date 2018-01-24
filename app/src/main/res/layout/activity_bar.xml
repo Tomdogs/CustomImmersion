@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lg.customimmersion.BarActivity"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:onClick="showActionBar"
+        android:text="显示actionBar"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/button" />
+
+    <Button
+        android:onClick="hideActionBar"
+        android:text="隐藏actionBar"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+
+    <Button
+        android:onClick="toolBar"
+        android:text="学习toolBar"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="actionBarActivityTheme" parent="AppTheme">
+
+    </style>
+
+    <style name="noActionBarActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- toolbar(actionbar)的颜色 -->
+        <item name="colorPrimary">#2e8abb</item> <!--浅蓝色-->
+
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">#3A5FCD</item> <!--深蓝色-->
+
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@android:color/white</item>
+
+        <!-- 底部导航栏颜色 -->
+        <item name="android:navigationBarColor">#4876FF</item>
+
+    </style>
+
+</resources>
