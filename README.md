@@ -15,11 +15,12 @@ View类提供了`setSystemUiVisibility(int visibility)`和`getSystemUiVisibility
   * 1.`View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN`：Activity全屏显示，但状态栏不会被隐藏覆盖，状态栏依然可见，Activity顶端布局部分会被状态遮住。<br>
   * 2.`View.SYSTEM_UI_FLAG_LAYOUT_STABLE`:获取一个稳定的视图内容。<br>
   * 3.`view.setFitsSystemWindows(booblean)`:设置系统是否需要考虑System bar（status bar和Navigation bar的统称）占据的区域来显示。如果需要的话就会执行`fitSystemWindows(Rect)`方法。即设置为true的时候系统会适应System bar 的区域，不内容不被遮住。`fitSystemWindows(Rect)(api level 14)`:用来调整自身的内容来适应System Bar(不让被System Bar遮住)。 这里其实不止Status Bar和Navigation Bar，只是目前只考虑Status Bar、Navigation Bar、IME。 <br>
-`onApplyWindowInsets(WindowInsets)(api level 20)`:同fitSystemWindows(Rect)的作用是一样的，更加方便扩展，对以后增加新的系统控件便于扩展。
+  * 4.`onApplyWindowInsets(WindowInsets)(api level 20)`:同fitSystemWindows(Rect)的作用是一样的，更加方便扩展，对以后增加新的系统控件便于扩展。
 
-* 第三：<br>
-总体来说android沉浸式包括两个方面：①状态栏着色模式②全屏模式（让android内容占据状态栏）<br>
+* 第三：使用`android:fitsSystemWindows="true"`，系统会自动的调整显示区域来实现详情的控件不会被遮住。<br>
 
-# 状态栏着色
+# 总体来说android沉浸式包括两个方面：①状态栏着色模式②全屏模式（让android内容占据状态栏）<br>
 
-# 全屏模式
+# ①状态栏着色模式
+未完待续
+# ②全屏模式
