@@ -24,8 +24,7 @@ View类提供了`setSystemUiVisibility(int visibility)`和`getSystemUiVisibility
 ## Android沉浸式实现
 ### 总体来说android沉浸式包括两个方面：①状态栏着色模式②全屏模式（让android内容占据状态栏）<br>
 ### ①状态栏着色模式
-      //API > 21
-      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             //清除半透明的状态栏
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             //系统为 system bar（status bar和 navigation bar）设置透明背景和设置背景颜色
@@ -33,8 +32,7 @@ View类提供了`setSystemUiVisibility(int visibility)`和`getSystemUiVisibility
             //为状态栏设置透明背景
             window.setStatusBarColor(Color.TRANSPARENT);
         } else {
-           //设置半透明背景
-            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
 
         ViewGroup decorView = (ViewGroup) window.getDecorView();
@@ -45,6 +43,7 @@ View类提供了`setSystemUiVisibility(int visibility)`和`getSystemUiVisibility
             ViewCompat.setFitsSystemWindows(rootView, true);
         }
 ### ②全屏模式
+
     //SDK >= 21(5.0)，5.0开始需要把颜色设置透明，否则状态栏会呈现系统默认的空间
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             //需要两个 flag 结合使用，表示让应用的主题内容占用系统的状态栏的空间
