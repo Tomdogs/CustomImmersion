@@ -1,9 +1,11 @@
 # CustomImmersion
 ## Android沉浸式表达<br>
 ### 效果预览
-<img src="https://github.com/Tomdogs/CustomImmersion/blob/master/app/src/main/res/mipmap-mdpi/picture1.png" width="200px" />
-![](https://github.com/Tomdogs/CustomImmersion/blob/master/app/src/main/res/mipmap-mdpi/picture1.png=300x300)
-![](https://github.com/Tomdogs/CustomImmersion/blob/master/app/src/main/res/mipmap-mdpi/picture2.png=100x100)
+<div  align="center">    
+<img src="https://github.com/Tomdogs/CustomImmersion/blob/master/app/src/main/res/mipmap-mdpi/picture1.png" width="300px" />
+####
+<img src="https://github.com/Tomdogs/CustomImmersion/blob/master/app/src/main/res/mipmap-mdpi/picture2.png" width="300px" />
+</div>
 ### 概述
 最近用到了Android沉浸式状态栏的表达方式，摸索了一段时间，并记录下来。首先要明白由于Android 4.4（API 19）才加入透明栏，Android 5.0 （API 21）之后才可以直接设置状态栏和导航栏。所以要适配不同版本之间的差异要以API 19 和 API 21 作为分界线，分别进行不同的设置。<br>
 
