@@ -8,8 +8,9 @@
 来了解android里几个与沉浸式重点的常量、方法。<br>
 
 * 第一：常量`WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS`和`WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS`
-WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS 是系统提供一个最小的`半透明(translucent)`状态栏<br>
-WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS 是在system bar（status bar和 navigation bar）绘制`透明(transparent)`背景并可以绘制颜色<br>
+
+`WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS` 是系统提供一个最小的`半透明(translucent)`状态栏<br>
+`WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS` 是在system bar（status bar和 navigation bar）绘制`透明(transparent)`背景并可以绘制颜色<br>
 
 * 第二：方法`view.setFitsSystemWindows()`和`view.getSystemUiVisibility()`。<br>
 View类提供了`setSystemUiVisibility(int visibility)`和`getSystemUiVisibility()`方法，这两个方法实现对状态栏的动态显示或隐藏的操作，以及获取状态栏当前可见性.<br>
