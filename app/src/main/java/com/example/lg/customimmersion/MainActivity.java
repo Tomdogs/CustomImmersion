@@ -35,4 +35,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this,GradientColorActivity.class));
     }
 
+    /**
+     * 调暗系统栏
+     *
+     * @param view
+     */
+    public void button5(View view) {
+        startActivity(new Intent(MainActivity.this, DarkenSystemUIActivity.class));
+    }
+
+    public void button6(View view) {
+        startActivity(new Intent(MainActivity.this, StatusBarActivity.class));
+    }
 }

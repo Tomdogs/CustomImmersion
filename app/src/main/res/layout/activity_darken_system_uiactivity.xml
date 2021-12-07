@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DarkenSystemUIActivity">
+
+    <ImageView
+        android:id="@+id/iv_top"
+        android:scaleType="fitXY"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@mipmap/autumn_ginkgo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/bt_immersion_status_show"
+        android:text="状态栏显示"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/iv_top"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toStartOf="@+id/bt_immersion_status_hide"/>
+
+    <Button
+        android:id="@+id/bt_immersion_status_hide"
+        android:text="状态栏隐藏"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/iv_top"
+        app:layout_constraintStart_toEndOf="@+id/bt_immersion_status_show"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/bt_navigation_show"
+        android:text="导航栏显示"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/bt_immersion_status_show"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_immersion_status_hide"/>
+
+    <Button
+        android:id="@+id/bt_navigation_hide"
+        android:text="导航栏隐藏"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/bt_immersion_status_show"
+        app:layout_constraintStart_toEndOf="@+id/bt_immersion_status_show"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,4 +34,16 @@
             android:text="状态栏着色"/>
 
 
+        <Button
+            android:visibility="gone"
+            android:onClick="button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="系统栏"/>
+
+        <Button
+            android:onClick="button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="系统栏2"/>
 </LinearLayout>

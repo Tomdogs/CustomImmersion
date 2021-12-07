@@ -274,7 +274,7 @@ public class StatusBarUtils {
      *
      * @param activity
      */
-    private void fullScreen(Activity activity) {
+    public void fullScreen(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 //5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色
