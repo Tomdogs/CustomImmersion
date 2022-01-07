@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".test.MyService"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <activity
             android:name=".DarkenSystemUIActivity"
             android:exported="true" />
@@ -36,8 +41,7 @@
         <activity
             android:name=".GradientColorActivity"
             android:theme="@style/noActionBarActivityTheme" />
-
-        <activity android:name=".StatusBarActivity"/>
+        <activity android:name=".StatusBarActivity" />
     </application>
 
 </manifest>

@@ -6,12 +6,16 @@ import android.app.Dialog
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.os.HandlerThread
+import android.util.Log
 import android.view.View
 import android.view.View.inflate
 import android.view.ViewGroup
 import android.view.WindowManager
 
 import androidx.appcompat.app.AppCompatActivity
+import java.lang.ref.ReferenceQueue
+import java.lang.ref.WeakReference
 
 class StatusBarActivity : AppCompatActivity() {
 
@@ -22,6 +26,21 @@ class StatusBarActivity : AppCompatActivity() {
 
         val actionBar = supportActionBar
         actionBar?.hide()
+
+        val referenceQueue = ReferenceQueue<Object>()
+
+
+        val reference = WeakReference(Object(), referenceQueue)
+        Log.d("引用log", "reference:$reference")
+
+        System.gc()
+
+
+        val reference1= referenceQueue.remove()
+
+        Log.d("引用log", "reference1:$reference1")
+
+
 
 //        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
 //        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
@@ -55,6 +74,8 @@ class StatusBarActivity : AppCompatActivity() {
 //        supportDisplayCutouts(this)
 //        EasSystemBar.setStatusBarShow(this)
 //        EasSystemBar.setStatusBarHide(this)
+
+        EasSystemBar.setContentAdjustToStatusBar(this, true)
 
         // 状态栏沉浸式
         findViewById<View>(R.id.bt_immersion_status_show).setOnClickListener {

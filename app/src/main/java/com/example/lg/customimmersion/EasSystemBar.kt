@@ -4,6 +4,7 @@ import android.app.Activity
 import android.graphics.Color
 import android.graphics.Rect
 import android.os.Build
+import android.util.Log
 import android.view.*
 import android.view.WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS
 import android.view.WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
@@ -31,7 +32,7 @@ object EasSystemBar {
         val window = activity.window
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+//            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
             window.statusBarColor = Color.TRANSPARENT
 
             // 部分手机上设置此标识无效
@@ -75,13 +76,12 @@ object EasSystemBar {
 
             // 设置 paddingTop
             val rootView = activity.window.decorView.findViewById<View>(android.R.id.content) as ViewGroup
-            rootView.setPadding(0, StatusBarUtils.getStatusBarHeight(activity), 0, 0)
+            rootView.setPadding(0, getStatusBarHeight(activity), 0, 0)
 
             // 增加占位状态栏
             val decorView = activity.window.decorView as ViewGroup
             val statusBarView = View(activity)
-            val lp = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                StatusBarUtils.getStatusBarHeight(activity))
+            val lp = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, getStatusBarHeight(activity))
             statusBarView.setBackgroundColor(color)
             statusBarView.layoutParams = lp
             decorView.addView(statusBarView)
@@ -100,6 +100,22 @@ object EasSystemBar {
         }
     }
 
+    /**
+     * 获取状态栏高度
+     *
+     * @param activity
+     * @return
+     */
+    fun getStatusBarHeight(activity: Activity): Int {
+        var result = 0
+        //获取状态栏高度的资源id
+        val resourceId = activity.resources.getIdentifier("status_bar_height", "dimen", "android")
+        if (resourceId > 0) {
+            result = activity.resources.getDimensionPixelSize(resourceId)
+        }
+        Log.d("getStatusBarHeight", result.toString() + "")
+        return result
+    }
 
     /**
      * 状态栏显示
