@@ -8,6 +8,8 @@
     <color name="shape2">#5EB9F8</color>
     <color name="shape3">#5CC2F8</color>
 
-    <color name="colorBlack">#876464</color>
+    <color name="colorBlack">#E8DFDF</color>
     <color name="transparent">#00000000</color>
+
+    <color name="FFE8DFDF">#FFE8DFDF</color>
 </resources>

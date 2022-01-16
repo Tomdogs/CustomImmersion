@@ -7,6 +7,9 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.lg.customimmersion.okhttp.OkhttpActivity;
+import com.example.lg.customimmersion.recycleView.AMainActivity;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -46,5 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void button6(View view) {
         startActivity(new Intent(MainActivity.this, StatusBarActivity.class));
+    }
+
+    public void button7(View view) {
+        startActivity(new Intent(MainActivity.this, AMainActivity.class));
+    }
+
+    public void button8(View view) {
+        startActivity(new Intent(MainActivity.this, OkhttpActivity.class));
     }
 }

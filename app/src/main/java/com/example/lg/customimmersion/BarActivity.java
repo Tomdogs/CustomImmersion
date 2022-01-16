@@ -1,7 +1,9 @@
 package com.example.lg.customimmersion;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.LruCache;
 import android.view.ContextMenu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -9,6 +11,9 @@ import android.view.View;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.lg.customimmersion.okhttp.ExtentionMethod;
+import com.example.lg.customimmersion.okhttp.ExtentionMethodKt;
 
 public class BarActivity extends AppCompatActivity {
 
@@ -19,6 +24,16 @@ public class BarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bar);
 
         actionBar = getSupportActionBar();
+
+
+        int cacheSize = 4 * 1024 * 1024; // 4MiB
+        LruCache<String, Bitmap> bitmapCache = new LruCache<String, Bitmap>(cacheSize) {
+            protected int sizeOf(String key, Bitmap value) {
+                return value.getByteCount();
+            }
+        };
+
+        ExtentionMethodKt.add()
     }
 
     public void showActionBar(View view){

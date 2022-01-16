@@ -46,4 +46,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="系统栏2"/>
+
+        <Button
+            android:onClick="button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="recycleView优化"/>
+
+        <Button
+            android:onClick="button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="okhttp"/>
 </LinearLayout>
